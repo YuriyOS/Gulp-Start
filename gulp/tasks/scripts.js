@@ -6,11 +6,14 @@ const concat = require('gulp-concat');
 const mode = require('gulp-mode')();
 const paths = require('../paths');
 
+var rigger = require('gulp-rigger');
+
 const scripts = () => {
   return gulp
     .src(paths.src.js)
     .pipe(plumber())
     .pipe(babel())
+    .pipe(rigger())
     .pipe(concat('scripts.js'))
     .pipe(mode.production(uglify()))
     .pipe(gulp.dest(paths.build.js));
