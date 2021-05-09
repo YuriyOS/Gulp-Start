@@ -1,15 +1,15 @@
 module.exports = {
   src: {
     html: 'src/*.html',
-    css: 'src/sass/main.scss',
-    js: 'src/js/**/*.js',
+    css: 'src/components/**/*.scss',
+    js: 'src/components/**/*.js',
     images: 'src/images/**/*',
     fonts: 'src/fonts/**/*',
   },
   watch: {
     html: 'src/**/*.html',
-    css: 'src/sass/**/*.scss',
-    js: 'src/js/**/*.js',
+    css: 'src/components/**/*.scss',
+    js: 'src/components/**/*.js',
     images: 'src/images/**/*',
     fonts: 'src/fonts/**/*',
   },

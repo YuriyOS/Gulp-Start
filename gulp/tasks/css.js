@@ -7,11 +7,17 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const gcmq = require('gulp-group-css-media-queries');
 const size = require('gulp-size');
-// const usedcss = require('usedcss');
+const concat = require('gulp-concat');
+
 const rename = require('gulp-rename');
 const mode = require('gulp-mode')();
 
 const paths = require('../paths');
+
+const CONFIGS = [
+  require('../configs/index')
+  // require('./gulp.account.config')
+];
 
 const css = () => {
   return gulp
@@ -38,6 +44,7 @@ const css = () => {
     .pipe(mode.development(sourcemaps.write()))
     .pipe(size({ showFiles: true }))
     .pipe(rename('styles.css'))
+    .pipe(concat('styles.css'))
     .pipe(gulp.dest(paths.build.css));
 };
 
