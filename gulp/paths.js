@@ -1,7 +1,7 @@
 module.exports = {
   src: {
     html: 'src/*.html',
-    css: 'src/components/**/*.scss',
+    css: 'src/pages/styles/*.scss',
     js: 'src/components/**/*.js',
     images: 'src/images/**/*',
     fonts: 'src/fonts/**/*',
